@@ -38,10 +38,10 @@
             <div class="form-inline my-2 my-lg-0">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link image" href="locale/en"><img src="{{asset('img/american.png')}}" alt=""> English</a>
+                        <a class="nav-link image" href="en"><img src="{{asset('img/american.png')}}" alt=""> English</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link image" href="locale/ar"><img src="{{asset('img/eg.png')}}" alt="">Arabic</a>
+                        <a class="nav-link image" href="ar"><img src="{{asset('img/eg.png')}}" alt="">Arabic</a>
                     </li>
                 
                     

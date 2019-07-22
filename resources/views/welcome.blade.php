@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                @lang('main.logo')
                 </div>
 
                 <div class="links">
