@@ -17,15 +17,22 @@
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
-    
 
-	Route::get('/', function () {
-        return view('localization');
-    });
-    
-    // Route::get('/', function () {
-    //     return view('welcome');
-    // });
+Route::get('/', function () {
+    return view('localization');
+});
 
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 
 });
+
+
+Route::namespace('BackEnd')->prefix('admin')->group(function(){
+
+  Route::get('/home','Home@index');
+  Route::resource('users','Users')->except(['show' , 'delete']);
+  
+});
+
+

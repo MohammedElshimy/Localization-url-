@@ -35,7 +35,7 @@
                     <a class="nav-link" href="#">@lang('home.contact_menu')</a>
                 </li>
             </ul>
-            <div class="form-inline my-2 my-lg-0">
+            <div class="form-inline my-2 my-lg-0"> 
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link image" href="en"><img src="{{asset('img/american.png')}}" alt=""> English</a>
