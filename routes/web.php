@@ -18,21 +18,26 @@
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
 
-Route::get('/', function () {
-    return view('localization');
-});
-
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+  Route::get('/', function () {
+      return view('localization');
+  });
 
 });
 
 
 Route::namespace('BackEnd')->prefix('admin')->group(function(){
-
   Route::get('/home','Home@index');
-  Route::resource('users','Users')->except(['show' , 'delete']);
+    // Route::get('users', 'Users@index');
+    // Route::get('users/create', 'Users@create');
+    // Route::post('users', 'Users@store');
+    // Route::get('edit/{id}', 'Users@edit');
+    // Route::get('users/{id}', 'Users@update');
+    // Route::get('users/delete/{id}', 'Users@index');
+
+  Route::resource('users' , 'Users')->except(['show' , 'delete']);
   
 });
 
 
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');

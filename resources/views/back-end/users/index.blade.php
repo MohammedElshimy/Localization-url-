@@ -20,22 +20,25 @@ $pageDes = "Here You Can add / edit / delete User";
 @endcomponent
 <!-- End Navbar -->
 
-<div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
+
+
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
                 <div class="row">
                   <div class="col-md-8">
                     <h4 class="card-title"> {{$pageTitle}}</h4>
                     <p>{{$pageDes}}</p>
                   </div> 
                   <div class="col-md-4 text-right">
-                      <button class="btn btn-primary">Add User</button>
+                      <a href="{{route('users.create')}}" class="btn btn-primary" >Add User</a>
                     </div>
                 </div>
-               
+              
               </div>
-              <div class="card-body">
-                <div class="table-responsive">
+                
+                <div class="card-body">
+                  <div class="table-responsive">
                   <table class="table">
                     <thead class=" text-primary">
                       <tr><th>
@@ -46,6 +49,9 @@ $pageDes = "Here You Can add / edit / delete User";
                       </th>
                       <th>
                         Email
+                      </th>
+                      <th>
+                        Time
                       </th>
                       <th class="text-right">
                         Control
@@ -63,26 +69,28 @@ $pageDes = "Here You Can add / edit / delete User";
                         <td>
                           {{$user->email}}
                         </td>
-                        <td class="text-right">
+                        <td>
                           {{$user->created_at}}
                         </td>
                         <td class="text-right">
-                          <button type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Remove">
+                            <a href="{{ route('users.edit', ['id'=> $user->id]) }}" rel="tooltip" title="" class="btn btn-block btn-link btn-sm" data-original-title="Edit Task">
+                                <i class="material-icons">edit</i>
+                            </a>
+                        <form action="{{route('users.destroy', ['id'=> $user->id])}}"  method="POST">
+                        {{method_field('delete')}}
+                                  {{csrf_field()}}
+                                  
+                          <button type="submit" rel="tooltip" title="" class="btn btn-block btn-link btn-sm" data-original-title="Remove">
                               <i class="material-icons">close</i>
                           </button>
-                        </td>
-                        <td class="text-right">
-                          <button type="button" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Edit Task">
-                              <i class="material-icons">edit</i>
-                          </button>
+                          </form>
                         </td>
                       @endforeach
                     </tbody>
                   </table>
+                  {!! $user->links !!}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-
 @endsection

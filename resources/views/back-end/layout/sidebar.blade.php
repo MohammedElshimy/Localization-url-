@@ -1,41 +1,26 @@
-<div class="sidebar" data-color="white" data-active-color="danger">
-  <!--
-    Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
--->
-  <div class="logo">
-    <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-      <div class="logo-image-small">
-        <img src="../assets/img/logo-small.png">
-      </div>
-    </a>
-    <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-      Creative Tim
-      <!-- <div class="logo-image-big">
-        <img src="../assets/img/logo-big.png">
-      </div> -->
-    </a>
-  </div>
-  <div class="sidebar-wrapper">
-    <ul class="nav">
-      <li class="active ">
-        <a href="./dashboard.html">
-          <i class="nc-icon nc-bank"></i>
-          <p>Dashboard</p>
-        </a>
-      </li>
-      <li>
-        <a href="./tables.html">
-          <i class="nc-icon nc-tile-56"></i>
-          <p>Table List</p>
-        </a>
-      </li>
-      <li>
-        <a href="./typography.html">
-          <i class="nc-icon nc-caps-small"></i>
-          <p>Typography</p>
-        </a>
-      </li>
+<div class="sidebar" data-color="purple" data-background-color="white">
+      <!--
+      Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
-    </ul>
-  </div>
-</div>
+      Tip 2: you can also add an image using data-image tag
+  -->
+      <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+          CT
+        </a>
+        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+          Creative Tim
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item active  ">
+            <a class="nav-link" href="#0">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <!-- your sidebar here -->
+        </ul>
+      </div>
+    </div>

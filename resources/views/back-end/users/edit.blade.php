@@ -19,7 +19,24 @@ $pageDes = "Here You Can edit User";
 
 @endcomponent
 <!-- End Navbar -->
-<h1>home</h1>
+        <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">{{$pageTitle}}</h4>
+                  <p class="card-category">{{$pageDes}}</p>
+                </div>
+                <div class="card-body">
+                  <form action="{{route('users.update', ['id'=> $users->id])}}" method="POST">
+                    {{method_field('PUT')}}
+                    @include('back-end.users.form')
+                    <button type="submit" class="btn btn-primary pull-right">Update User</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
 
 
 
